@@ -1,7 +1,12 @@
+import 'package:app/views/screens/create_site.dart';
 import 'package:app/views/screens/login_page.dart';
+import 'package:app/views/screens/main_page.dart';
+import 'package:app/views/screens/site_page.dart';
+import 'package:app/views/screens/task_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'helpers/fcm_helper.dart';
 import 'views/screens/home_page.dart';
 
@@ -24,7 +29,6 @@ void main() {
     print("ForeGround");
     print(msg.notification!.title!);
     print(msg.notification!.body!);
-
   });
 
   runApp(
@@ -37,6 +41,10 @@ void main() {
       routes: {
         '/': (context) => HomePage(),
         'login_page': (context) => LoginPage(),
+        'main_page': (context) => MainPage(),
+        'create_site': (context) => CreateSite(),
+        'site_page': (context) => SitePage(),
+        'task_page': (context) => TaskPage()
       },
     ),
   );
