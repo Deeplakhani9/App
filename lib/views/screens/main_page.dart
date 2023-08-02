@@ -8,6 +8,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  List dropDownItem = ['one', 'two', 'three'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
